@@ -38,7 +38,7 @@ ans2=$( echo "$ans" | cut -c 1 | tr [:upper:] [:lower:] )
 if [ "$ans2" = y ]; then
 	read -p "Please enter the name of the process to kill: " pname
 fi
-if [ "pname" = a ] || [ "pname" = n ]; then
+if [ "$pname" = a ] || [ "$pname" = n ]; then
 	echo "This is not a valid process name."
 else
 	pkill -15 $pname
